@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Angularjs And Rest Api</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body > 
+   <div>
+       
+   </div>
+    <div class="container-fuild" ng-controller='countries'>
+      <div id="marqq">
+           <marquee behavior="" direction="x" scrolldelay="30">
+           
+             <h2>Countries Bitches</h2> 
+             
+             <img src="https://66.media.tumblr.com/1a12e21f43fd0db7c51edf19b39ea67c/tumblr_n1tjxbgLLn1ssbvp5o1_500.gif" alt="">
+             
+             <img src="https://67.media.tumblr.com/2de97098641b22029926f743c9caa22f/tumblr_n1ik0iZyQm1tslnr5o1_500.gif" alt="">
+             <img src="https://tctechcrunch2011.files.wordpress.com/2015/08/safe_image.gif" alt="">
+             
+             <img src="http://data.whicdn.com/images/59286064/large.gif" alt="">
+             
+             <img src="http://christmasgifs.org/wp-content/uploads/2013/12/favre_full.gif" alt="">
+             
+             <img src="https://upload-assets.vice.com/files/2016/04/29/1461944106com_post_133564839649_i_know_when_that_hotline_bling.gif" alt="">
+             <img src="https://www.google.com.pk/imgres?imgurl=http%3A%2F%2Fchristmasgifs.org%2Fwp-content%2Fuploads%2F2013%2F12%2Ffavre_full.gif&imgrefurl=http%3A%2F%2Fchristmasgifs.org%2F&docid=my05DzeZW4HPOM&tbnid=6jRF4ZWedNRPnM%3A&w=500&h=500&bih=667&biw=1366&ved=0ahUKEwj56vfxm9zOAhVCLhoKHVGbCOwQMwhlKCcwJw&iact=mrc&uact=8#h=500&imgdii=6jRF4ZWedNRPnM%3A%3B6jRF4ZWedNRPnM%3A%3Bk2xta6EYVn0IYM%3A&w=500" alt="">
+             
+             <img src="http://gifsec.com/wp-content/uploads/GIF/2014/11/Fuck-you-Guardians-of-the-Galaxy-GIF.gif" alt="">
+             
+             <img src="https://67.media.tumblr.com/84bab58a4d3ee0c82bb10c03bff9e935/tumblr_nfi1pwT9lE1t5c6u6o1_500.gif" alt="">
+             
+             <img src="http://c.fastcompany.net/multisite_files/fastcompany/imagecache/inline-large/inline/2015/10/3052591-inline-michealmyers.gif" alt="">
+           
+           
+           </marquee>
+      </div>
+        <div class="row">
+            <div class="page-header" id="jokerbg" style=" background-image: url('../img/{{region_code}}.jpg');">
+               
+                <h3>Countries Api</h3>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+           <div class="col-md-8">
+               <section style="padding:20px;">
+                  <div class="form-inline">
+                       <label for="country">Choose A Region</label>
+                        <select name="country" id="country" class="form-control" ng-model="region_code">
+                    <option value="" >Select</option>
+                    <option value="africa" >Africa</option>
+                    <option value="americas" >Americas</option>
+                    <option value="asia">Asia</option>
+                    <option value="europe" >Europe</option>
+                    <option value="oceania" >Oceania</option>
+                </select>
+                 <button class="btn btn-danger " ng-click="load()">Load</button>
+                  </div>
+                
+            </section>
+               
+           </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-4 fix-me" ng-repeat="data in data">
+                <div>
+                   <div class="col-md-6">
+                  <img src="http://www.geonames.org/flags/x/{{data.alpha2Code | lowercase}}.gif" alt="" class="img-responsive">
+                     
+                   </div>
+                   <div>
+                       <h2>Country: {{data.name}}</h2>
+                   
+                    
+                    
+                    <p>
+                       Calling Code: {{data.name}}
+                    
+                    
+                    
+                    <p>
+                       Capital Of {{data.name}}: {{data.capital}}
+                    </p>
+                    
+                    <p>
+                    {{data.name}} is located in: {{data.region}}
+                    </p>
+            
+                     <p>
+                       Population Of {{data.name}}: {{data.population}}
+                    </p>
+                      
+                       <p>
+                        {{data.name}}'s Alpha2Code: {{data.alpha2Code}}
+                    </p>
+                       
+                     </p>
+                   </div>
+                    
+                        
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+p{
+    text-align: justify;
+}
+
+.fix-me{
+    padding: 10px;
+    
+    
+}
+
+#jokerbg{
+    background: black;
+    color:white;
+   
+    background-position: center;
+     
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+#jokerbg h3{
+    color:#fcfcfc;
+    margin: 0 auto;
+    padding: 40px;
+    line-height: 350px;
+    font-size: 2.6em;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    
+    
+}
+
+#marqq img{
+    height: 130px;
+    width: 250px;
+}
